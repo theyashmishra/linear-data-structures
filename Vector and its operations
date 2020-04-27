@@ -1,0 +1,33 @@
+#include <iostream>
+#include<vector>
+#include<algorithm>
+bool f(int x,int y){
+    return x>y;
+}
+using namespace std;
+
+int main() {
+vector<int> a={11,2,5,61};
+cout<<a[1]<<endl;
+sort(a.begin(),a.end());
+bool p=binary_search(a.begin(),a.end(),5);
+a.push_back(50);
+a.push_back(50);
+a.push_back(50);
+a.push_back(50);
+auto it=lower_bound(a.begin(),a.end(),50);
+auto it2=upper_bound(a.begin(),a.end(),50);
+
+cout<<*it<<" "<<*it2<<"\n"<<it-it2;
+vector<int>:: iterator i;
+sort(a.begin(),a.end(),f);
+for(int &x:a){
+   x++;
+}
+for(int &x:a){
+    cout<<x<<" ";
+}
+
+
+	return 0;
+}
