@@ -1,2 +1,2 @@
-# linear-data-structures
+# Standard template library
 C++
